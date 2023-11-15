@@ -1,0 +1,14 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">My Restaurants</a>
+  </div>
+  <div>
+    <h6>All restaurants:</h6>
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+        <li><a href=<%= restaurant_path(restaurant) %>><%= restaurant.name %></a></li>
+      <%# <li><hr class="dropdown-divider"></li> %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
